@@ -1,0 +1,100 @@
+@prefix : <http://bp.samuel-sokol.sk/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Class rdf:type rdfs:Class .
+:Method rdf:type rdfs:Class .
+:Attribute rdf:type rdfs:Class .
+:Data rdf:type rdfs:Class .
+
+:belongsTo rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range :Class .
+
+:hasAttribute rdf:type rdf:Property ;
+    rdfs:domain :Class ;
+    rdfs:range :Attribute .
+
+:reads rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range :Attribute .
+
+:writes rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range :Attribute .
+
+:consumes rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range :Data .
+
+:produces rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range :Data .
+
+:name rdf:type rdf:Property ;
+    rdfs:domain :Class ;
+    rdfs:range rdfs:Literal .
+
+:name rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range rdfs:Literal .
+
+:name rdf:type rdf:Property ;
+    rdfs:domain :Attribute ;
+    rdfs:range rdfs:Literal .
+
+:name rdf:type rdf:Property ;
+    rdfs:domain :Data ;
+    rdfs:range rdfs:Literal .
+
+:description rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range rdfs:Literal .
+
+:description rdf:type rdf:Property ;
+    rdfs:domain :Attribute ;
+    rdfs:range rdfs:Literal .
+
+:description rdf:type rdf:Property ;
+    rdfs:domain :Data ;
+    rdfs:range rdfs:Literal .
+
+:type rdf:type rdf:Property ;
+    rdfs:domain :Attribute ;
+    rdfs:range rdfs:Literal .
+
+:type rdf:type rdf:Property ;
+    rdfs:domain :Data ;
+    rdfs:range rdfs:Literal .
+
+:summary rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range rdfs:Literal .
+
+:code rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range rdfs:Literal .
+
+:source rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range rdfs:Literal .
+
+:steps rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range rdfs:Literal .
+
+:tags rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range rdfs:Literal .
+
+:responsibility rdf:type rdf:Property ;
+    rdfs:domain :Class ;
+    rdfs:range rdfs:Literal .
+
+:attributes rdf:type rdf:Property ;
+    rdfs:domain :Class ;
+    rdfs:range rdfs:Literal .
+
+:id rdf:type rdf:Property ;
+    rdfs:domain :Method ;
+    rdfs:range rdfs:Literal .
