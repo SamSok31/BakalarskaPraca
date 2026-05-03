@@ -1,0 +1,4467 @@
+1. RUN
+
+FAILED eshop_tests.py::test_B2_duplicate_product - AssertionError: assert {'carts': set...P1', 5)}, ...} == {'carts': set...1', 10)}, ...}
+FAILED eshop_tests.py::test_B4_update_product_price - AssertionError: assert {'carts': set...P1', 5)}, ...} == {'carts': set...1', 10)}, ...}
+FAILED eshop_tests.py::test_B7_multiple_product_updates - AssertionError: assert {'carts': set...P1', 2)}, ...} == {'carts': set...1', 10)}, ...}
+FAILED eshop_tests.py::test_B14_update_product_with_existing_cart - AssertionError: assert {'carts': {('...P1', 3)}, ...} == {'carts': {('...P1', 6)}, ...}
+FAILED eshop_tests.py::test_B16_multiple_updates_with_price_changes - AssertionError: assert {'carts': set...P1', 2)}, ...} == {'carts': set...1', 10)}, ...}
+FAILED eshop_tests.py::test_E10_price_changes_before_checkout - AssertionError: assert {'carts': {('...P1', 0)}, ...} == {'carts': {('...P1', 3)}, ...}
+FAILED eshop_tests.py::test_F8_price_change_with_reservations - AssertionError: assert {'carts': {('...P1', 0)}, ...} == {'carts': {('...P1', 0)}, ...}
+=============================================== 7 failed, 74 passed in 0.68s ===============================================
+
+
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U2'}}
+
+ACTUAL:
+{'carts': {('U2', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U3', ()), ('U2', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1', 'U3', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U3', ()), ('U2', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1', 'U3', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U2'}}
+
+ACTUAL:
+{'carts': {('U2', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST FAILED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 0.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 0.000 + 1.000 + 1.000) / 5 = 0.800
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P1', 5), ('P2', 3)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P1', 5), ('P2', 3)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST FAILED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 0.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 0.000 + 1.000 + 1.000) / 5 = 0.800
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST FAILED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 0.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 0.000 + 1.000 + 1.000) / 5 = 0.800
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P2', 20)},
+ 'stock': {('P2', 3)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P2', 20)},
+ 'stock': {('P2', 3)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 3)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 3)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST FAILED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 6)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 0.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 0.000 + 1.000 + 1.000) / 5 = 0.800
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST FAILED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 15)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 15)},
+ 'stock': {('P1', 2)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 0.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 0.000 + 1.000 + 1.000) / 5 = 0.800
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2), ('P2', 1)))},
+ 'orders': set(),
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P2', 2), ('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2), ('P2', 1)))},
+ 'orders': set(),
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P2', 2), ('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 3),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 3),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),)), ('U2', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),)), ('U2', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', ()), ('U1', (('P1', 5),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U2', ()), ('U1', (('P1', 5),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),)), ('U2', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 1)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),)), ('U2', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 1)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', (('P1', 2),)), ('U1', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U2', (('P1', 2),)), ('U1', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2), ('P2', 1)), 40)},
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P2', 2), ('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2), ('P2', 1)), 40)},
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P2', 2), ('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P1', 0), ('P2', 0)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P1', 0), ('P2', 0)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', (('P1', 2),))},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', (('P1', 2),))},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'processing', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'processing', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10),
+            ('SK00002', 'pending', 'U1', (('P1', 1),), 10),
+            ('SK00003', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10),
+            ('SK00002', 'pending', 'U1', (('P1', 1),), 10),
+            ('SK00003', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST FAILED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 40)},
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 40)},
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 0.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 0.000 + 1.000 + 1.000) / 5 = 0.800
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'delivered', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'delivered', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'processing', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'processing', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'delivered', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'delivered', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 3),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 3),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U2', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 1)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U2', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 1)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U2', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U2', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2), ('P2', 1)), 40),
+            ('SK00002', 'pending', 'U2', (('P1', 3),), 30)},
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P1', 0), ('P2', 2)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2), ('P2', 1)), 40),
+            ('SK00002', 'pending', 'U2', (('P1', 3),), 30)},
+ 'products': {('P1', 10), ('P2', 20)},
+ 'stock': {('P1', 0), ('P2', 2)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 5),), 50),
+            ('SK00002', 'pending', 'U2', (('P1', 5),), 50)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 5),), 50),
+            ('SK00002', 'pending', 'U2', (('P1', 5),), 50)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', (('P1', 3),))},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', (('P1', 3),))},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST FAILED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 40),
+            ('SK00002', 'pending', 'U2', (('P1', 3),), 60)},
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 40)},
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 0.667
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 0.667) / 5 = 0.933
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 3),), 30),
+            ('SK00002', 'pending', 'U2', (('P1', 5),), 50)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 3),), 30),
+            ('SK00002', 'pending', 'U2', (('P1', 5),), 50)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+========================================
+F1 SCORE (average): 0.9844
+========================================
+
+
+
+
+FEEDBACK:
+The implementation incorrectly handles product updates.
+
+When a product already exists, the system currently overwrites its stock values instead of increasing them. This leads to loss of previously added stock and breaks consistency, especially when updates happen multiple times or when there are active reservations.
+
+Required behavior:
+
+When adding an existing product:
+total_stock must be increased by the new value (not replaced)
+available_stock must be increased by the same amount
+Existing reservations must remain unchanged
+Available stock must always reflect the current state after reservations
+
+This issue causes incorrect results in scenarios with:
+
+repeated product additions
+price updates combined with stock updates
+updates while items are already reserved
+checkout after product updates
+
+Fix the product update logic so that stock is accumulated instead of overwritten, while preserving reservation consistency.
+
+
+2. RUN
+
+===================================================== 81 passed in 0.44s ======================================================
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U2'}}
+
+ACTUAL:
+{'carts': {('U2', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U3', ()), ('U1', ()), ('U2', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U3', 'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U3', ()), ('U1', ()), ('U2', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U3', 'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U2'}}
+
+ACTUAL:
+{'carts': {('U2', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 3), ('P1', 5)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 3), ('P1', 5)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P2', 20)},
+ 'stock': {('P2', 3)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P2', 20)},
+ 'stock': {('P2', 3)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 3)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 3)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 6)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 6)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 15)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': {('P1', 15)},
+ 'stock': {('P1', 10)},
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2), ('P2', 1)))},
+ 'orders': set(),
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 2), ('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2), ('P2', 1)))},
+ 'orders': set(),
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 2), ('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 3),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 3),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', (('P1', 1),)), ('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U2', (('P1', 1),)), ('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', ()), ('U1', (('P1', 5),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U2', ()), ('U1', (('P1', 5),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),)), ('U2', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 1)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),)), ('U2', ())},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 1)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 2),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', (('P1', 2),)), ('U1', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U2', (('P1', 2),)), ('U1', (('P1', 1),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2), ('P2', 1)), 40)},
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 2), ('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2), ('P2', 1)), 40)},
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 2), ('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 0), ('P1', 0)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 0), ('P1', 0)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', (('P1', 2),))},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', (('P1', 2),))},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'processing', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'processing', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+ACTUAL:
+{'carts': set(),
+ 'orders': set(),
+ 'products': set(),
+ 'stock': set(),
+ 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10),
+            ('SK00002', 'pending', 'U1', (('P1', 1),), 10),
+            ('SK00003', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10),
+            ('SK00002', 'pending', 'U1', (('P1', 1),), 10),
+            ('SK00003', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 40)},
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 40)},
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 3)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'delivered', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'delivered', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'processing', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'processing', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'delivered', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'delivered', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 4)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 7)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', (('P1', 3),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', (('P1', 3),))},
+ 'orders': set(),
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U2', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 1)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U2', (('P1', 2),), 20)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 1)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+ACTUAL:
+{'carts': {('U1', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 2)},
+ 'users': {'U1'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U2', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 20),
+            ('SK00002', 'pending', 'U2', (('P1', 1),), 10)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2), ('P2', 1)), 40),
+            ('SK00002', 'pending', 'U2', (('P1', 3),), 30)},
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 2), ('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2), ('P2', 1)), 40),
+            ('SK00002', 'pending', 'U2', (('P1', 3),), 30)},
+ 'products': {('P2', 20), ('P1', 10)},
+ 'stock': {('P2', 2), ('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 5),), 50),
+            ('SK00002', 'pending', 'U2', (('P1', 5),), 50)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 5),), 50),
+            ('SK00002', 'pending', 'U2', (('P1', 5),), 50)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U2', (('P1', 3),)), ('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U2', (('P1', 3),)), ('U1', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 3),), 30)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 40),
+            ('SK00002', 'pending', 'U2', (('P1', 3),), 60)},
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'pending', 'U1', (('P1', 2),), 40),
+            ('SK00002', 'pending', 'U2', (('P1', 3),), 60)},
+ 'products': {('P1', 20)},
+ 'stock': {('P1', 0)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 3),), 30),
+            ('SK00002', 'pending', 'U2', (('P1', 5),), 50)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1', 'U2'}}
+
+ACTUAL:
+{'carts': {('U1', ()), ('U2', ())},
+ 'orders': {('SK00001', 'cancelled', 'U1', (('P1', 3),), 30),
+            ('SK00002', 'pending', 'U2', (('P1', 5),), 50)},
+ 'products': {('P1', 10)},
+ 'stock': {('P1', 5)},
+ 'users': {'U1', 'U2'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+products_f1 = 1.000
+stock_f1 = 1.000
+carts_f1 = 1.000
+orders_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000 + 1.000 + 1.000) / 5 = 1.000
+
+========================================
+F1 SCORE (average): 1.0000
+========================================

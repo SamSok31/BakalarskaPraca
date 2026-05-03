@@ -1,0 +1,133 @@
+1. Rezervačný systém
+
+Create a reservation system in Python.
+The system should manage reservations for rooms by users. Each room can only be reserved by one user at a time.
+
+Functional requirements:
+- The system must allow to create new rooms and new users.
+- The system must allow to delete current room or user.
+- The system must allow creating a reservation for a specific room and user.
+- The system must prevent double booking of the same room at the same time.
+- Multiple bookings of different rooms for the same user at the same time is allowed.
+- The system must allow cancelling an existing reservation.
+- The system must allow creating a new reservation after a previous one has been cancelled.
+- The system must handle multiple users and multiple rooms.
+- The system must maintain, provide access and way to retrieve the current state of users, rooms and reservations.
+
+Behavioral requirements:
+- If a reservation is attempted for a room that is already reserved, the system must reject or ignore the request.
+- Cancelling a reservation must remove the reservation from the system.
+- Re-creating a reservation after cancellation must succeed if no conflict exists.
+- The system must remain internally consistent after any sequence of operations.
+
+Assumptions (behavioral clarifications):
+- Users and rooms are uniquely identified by their IDs.
+- Creating a user or room with an existing ID has no effect (no duplicates are created).
+- A reservation can only be created if both the user and the room exist.
+- Attempting to create a reservation for a non-existing user or room has no effect.
+- Cancelling a non-existing reservation has no effect.
+- Deleting a user removes all reservations associated with that user.
+- Deleting a room removes all reservations associated with that room.
+- Creating the same reservation multiple times results in only one instance (no duplicates).
+- If time intervals are used:
+  - Reservations are allowed only if their time intervals do not overlap.
+  - Boundary times (e.g., [10,11] and [11,12]) are considered non-overlapping
+
+Constraints:
+- Implement the system in Python.
+- Use object-oriented design.
+
+
+
+
+
+
+2. E-shop backend:
+
+Create an advanced e-shop backend system in Python.
+The system should manage users, products, carts, reservations, and orders, while ensuring correct handling of current available stock.
+
+
+Functional requirements:
+
+- The system must allow creating users:
+  - Every user is created by ID.
+  - Duplicate users are not allowed.
+  - An empty cart is automatically created for each user.
+
+- The system must allow deleting users:
+  - Deleting a user must remove their cart and cancel their reservations.
+  - When deleting a user, products and their quantities from reservations must be handled as follows:
+    - If the product still exists in the stock system, the reserved quantity is returned to the current available stock.
+    - If the product no longer exists in the stock system, the reservation is removed without returning stock.
+  - Existing orders of the user must remain unaffected.
+
+- The system must allow adding products with attributes: name, price, and stock:
+  - Zero stock is allowed.
+  - If a product with the same name already exists:
+    - Its current available stock must be increased.
+    - Its price must be updated.
+
+- The system must allow deleting products:
+  - Deleting a product removes it only from the current available stock system.
+  - Existing reservations and orders must remain unchanged.
+
+- The system must allow users to modify their cart:
+  - Adding products with zero quantity should be ignored.
+  - Adding products succeeds only if the requested quantity is available in the current available stock. Otherwise, the operation is ignored.
+  - Adding products to the cart that are already there will only modify and increase the number of given products in the reservation.
+  - Adding products to the cart creates a reservation that temporarily blocks the product quantity for the user.
+  - Reserved quantities must not be available to other users and must be deducted from the current available stock.
+  - Removing a product from the cart must reduce or remove the corresponding reservation:
+    - If the removal quantity exceeds the reserved amount, the operation must be ignored.
+    - If the product still exists in the stock system, the quantity is returned to the current available stock.
+    - If the product no longer exists in the stock system, the reservation is removed without affecting stock.
+
+- The system must allow users to perform checkout:
+  - Checkout of empty cart must be ignored.
+  - Reserved quantities should already been deducted from the current available stock at the time of reservation, so you do not need to deduct it again.
+  - During checkout:
+    - If any reserved product does not exist in the stock system, the checkout must fail and no changes must be applied.
+    - Prices are calculated using the current product prices at the time of checkout.
+    - A new order with status "pending" is created.
+    - The order must store a snapshot of product prices at the time of checkout.
+    - The cart and corresponding reservations are cleared.
+
+  - Checkout must be atomic (all-or-nothing):
+    - If any condition during checkout is not satisfied, the checkout must fail and no changes must be applied.
+
+  - After a successful checkout:
+    - A new order must receive an ID in the format "SK00001".
+    - "SK" must always be the prefix, followed by a 5-digit sequential number.
+    - The first order has ID "SK00001", the next "SK00002", and so on.
+    - Order IDs must be globally unique and strictly sequential across the entire system.
+    - Order IDs must not be reused, even if orders are cancelled.
+
+- The system must allow updating order status:
+  - Orders can have only the following statuses:
+    pending, processing, completed, shipped, delivered, cancelled
+  - Status transitions must strictly follow this sequence:
+    pending -> processing -> completed -> shipped -> delivered
+  - A transition to "cancelled" is allowed from any status.
+  - From "delivered", only a transition to "cancelled" is allowed.
+  - "cancelled" is a terminal state. Any further status changes must be ignored.
+  - When an order is changed to "cancelled":
+    - If the product exists in the stock system, only its current available stock is increased; the price remains unchanged.
+    - If a product from the cancelled order no longer exists, it must be recreated with the price stored in the order.
+
+- The system must maintain and provide access to the following state:
+  - Current users
+  - Current products (including price)
+  - Current available stock (i.e., stock not reserved in any cart)
+  - Carts and reservations of all current users
+  - Orders and their statuses
+
+
+Behavioral requirements:
+- Operations on non-existing entities must be ignored and have no effect.
+- Operations with invalid inputs (e.g., negative values where not meaningful) must be ignored and have no effect.
+- The system must remain consistent after any sequence of operations.
+
+Constraints:
+- Implement the system in Python.
+- Use object-oriented design.
