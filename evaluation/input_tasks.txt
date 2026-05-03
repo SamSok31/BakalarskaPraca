@@ -1,4 +1,4 @@
-1. Rezervačný systém
+1. Reservation system
 
 Create a reservation system in Python.
 The system should manage reservations for rooms by users. Each room can only be reserved by one user at a time.
