@@ -46,7 +46,6 @@ docker run \
   neo4j
 ```
 
-Nastavenie pripojenia:
 V súbore:
 ```bash
 graphRAG/client.py
@@ -78,8 +77,85 @@ REPOSITORIES = [
 ]
 ```
 
-## Spustenie systému
-Používateľské rozhranie sa spúšťa pomocou Streamlit:
+---
+
+## EN Description
+
+This directory contains the implementation of the proposed agentic system for generating source code from natural language input.
+
+The system is based on a multi-agent architecture implemented using LangGraph and utilizes a GraphRAG knowledge base stored in a Neo4j graph database.
+
+---
+
+## Requirements
+
+- Python 3.10+
+- Neo4j (local or Docker)
+- GitHub API token
+- Mistral API key
+- HuggingFace token
+
+---
+
+## Installation
+
+Dependencies:
+```bash
+pip install streamlit langchain langgraph neo4j sentence-transformers scikit-learn plantuml huggingface_hub requests
+```
+---
+
+## Configuration (.env)
+Create a .env file in the root directory:
+```bash
+MISTRAL_API_KEY=your_key
+GITHUB_TOKEN=your_token
+HF_TOKEN=your_token
+```
+
+## Neo4j setup
+The system uses Neo4j as a GraphRAG knowledge base.
+Run via Docker (recommended)
+```bash
+docker run \
+  -p 7474:7474 -p 7687:7687 \
+  -e NEO4J_AUTH=neo4j/password \
+  neo4j
+```
+
+In file:
+```bash
+graphRAG/client.py
+```
+set:
+```bash
+neo = Neo4jClient(
+    uri="bolt://localhost:7687",
+    user="neo4j",
+    password="password"
+)
+```
+
+
+## GitHub scanning:
+In file:
+```bash
+github/ingestion.py
+```
+define repositories used for building the knowledge base:
+```bash
+REPOSITORIES = [
+    {
+        "owner": "your_username",
+        "name": "repo_name",
+        "full_name": "your_username/repo_name",
+        "type": "internal"
+    }
+]
+```
+
+## Running the system
+Run the UI using Streamlit:
 ```bash
 python -m streamlit run ui_app.py
 ```
