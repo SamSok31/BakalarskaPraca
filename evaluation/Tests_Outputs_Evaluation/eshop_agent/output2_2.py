@@ -1,204 +1,218 @@
-class User:
-    def __init__(self, user_id: str) -> None:
-        self.user_id = user_id
-        self.cart = {}
+from copy import deepcopy
 
-class Product:
-    def __init__(self, name: str, price: float):
-        self.name = name
-        self.price = price
+from types import MappingProxyType
 
-class Order:
-    def __init__(self, order_id: str, status: str, products: dict[str, dict]):
-        self.order_id = order_id
-        self.status = status
-        self.products = products
-
-class EShopBackend:
+class EShopSystem:
     def __init__(self):
         self.users = {}
         self.products = {}
         self.orders = {}
         self.next_order_id = 1
-        self.stock = {}
-        self.reserved_stock = {}
+        self.reservations = {}
 
-    def create_user(self, user_id: str) -> bool:
+    def create_user(self, user_id):
         if not user_id or user_id in self.users:
             return False
 
-        new_user = User(user_id)
-        self.users[user_id] = new_user
+        self.users[user_id] = {
+            'cart': {},
+            'reservations': {}
+        }
         return True
 
-    def delete_user(self, user_id: str) -> bool:
+    def add_product(self, product_name, price, stock):
+        if not product_name or price < 0 or stock < 0:
+            return False
+
+        if product_name in self.products:
+            self.products[product_name]['stock'] += stock
+            self.products[product_name]['price'] = price
+        else:
+            self.products[product_name] = {
+                'price': price,
+                'stock': stock
+            }
+
+        return True
+
+    def delete_product(self, product_name):
+        if product_name not in self.products:
+            return False
+
+        del self.products[product_name]
+        return True
+
+    def get_system_state(self):
+        """Retrieves the current system state, including users, products, physical stock, carts, and orders.
+
+        Returns:
+            dict: A read-only snapshot of the current system state, including:
+                - users: Dictionary of user data including carts
+                - products: Dictionary of product data including physical stock (reservations are not subtracted)
+                - reservations: Dictionary of user reservations
+                - orders: Dictionary of all orders
+                - next_order_id: The next available order ID
+        """
+        state = {
+            'users': deepcopy(self.users),
+            'products': deepcopy(self.products),
+            'orders': deepcopy(self.orders),
+            'next_order_id': self.next_order_id,
+            'reservations': deepcopy(self.reservations)
+        }
+        return MappingProxyType(state)
+
+    def delete_user(self, user_id):
         if user_id not in self.users:
             return False
 
-        user = self.users[user_id]
-        for product_name, quantity in list(user.cart.items()):
-            if product_name in self.products and product_name in self.stock:
-                self.stock[product_name] += quantity
-            if product_name in self.reserved_stock:
-                del self.reserved_stock[product_name]
-            del user.cart[product_name]
+        # Process reservations
+        user_reservations = self.users[user_id]['reservations'].copy()
+        for product_name, quantity in user_reservations.items():
+            if product_name in self.products:
+                self.products[product_name]['stock'] += quantity
+            del self.users[user_id]['reservations'][product_name]
 
+        # Clear cart and reservations
+        self.users[user_id]['cart'].clear()
+
+        # Delete user
         del self.users[user_id]
-        return True
-
-    def add_or_update_product(self, name: str, price: float, stock: int) -> bool:
-        if not name.strip() or price < 0 or stock < 0:
-            return False
-
-        if name in self.products:
-            self.products[name].price = price
-            self.stock[name] += stock
-        else:
-            new_product = Product(name, price)
-            self.products[name] = new_product
-            self.stock[name] = stock
 
         return True
 
-    def delete_product(self, name: str) -> bool:
-        if name not in self.products:
+    def add_to_cart(self, user_id, product_name, quantity):
+        if quantity <= 0:
             return False
 
-        del self.products[name]
-        del self.stock[name]
-        if name in self.reserved_stock:
-            del self.reserved_stock[name]
-        return True
-
-    def modify_cart(self, user_id: str, product_name: str, quantity: int) -> bool:
-        if user_id not in self.users or product_name not in self.products:
+        if user_id not in self.users:
             return False
 
-        if quantity == 0:
+        if product_name not in self.products:
             return False
 
-        user = self.users[user_id]
-        product = self.products[product_name]
-
-        if quantity > 0:
-            if product_name not in self.stock or self.stock[product_name] < quantity:
-                return False
-
-            self.stock[product_name] -= quantity
-            if product_name in self.reserved_stock:
-                self.reserved_stock[product_name] += quantity
-            else:
-                self.reserved_stock[product_name] = quantity
-
-            if product_name in user.cart:
-                user.cart[product_name] += quantity
-            else:
-                user.cart[product_name] = quantity
-        else:
-            abs_quantity = abs(quantity)
-            if product_name not in user.cart or user.cart[product_name] < abs_quantity:
-                return False
-
-            user.cart[product_name] -= abs_quantity
-            if user.cart[product_name] == 0:
-                del user.cart[product_name]
-
-            if product_name in self.stock:
-                self.stock[product_name] += abs_quantity
-            if product_name in self.reserved_stock:
-                self.reserved_stock[product_name] -= abs_quantity
-                if self.reserved_stock[product_name] == 0:
-                    del self.reserved_stock[product_name]
-
-        return True
-
-    def checkout(self, user_id: str) -> tuple[bool, str | None]:
-        if user_id not in self.users or not self.users[user_id].cart:
-            return False, None
-
-        user = self.users[user_id]
-        cart = user.cart
-        order_items = {}
-
-        for product_name, quantity in cart.items():
-            if product_name not in self.products or product_name not in self.stock:
-                return False, None
-
-            if self.stock[product_name] < quantity:
-                return False, None
-
-            product = self.products[product_name]
-            order_items[product_name] = {
-                'price': product.price,
-                'quantity': quantity
-            }
-
-        order_id = f"SK{self.next_order_id:05d}"
-        order = Order(
-            order_id=order_id,
-            products=order_items,
-            status='pending'
+        physical_stock = self.products[product_name]['stock']
+        existing_reservations = sum(
+            self.users[uid]['reservations'].get(product_name, 0)
+            for uid in self.users
+            if product_name in self.users[uid]['reservations']
         )
 
-        try:
-            for product_name, quantity in cart.items():
-                if product_name in self.reserved_stock:
-                    del self.reserved_stock[product_name]
+        if quantity > (physical_stock - existing_reservations):
+            return False
 
-            self.orders[order_id] = order
-            self.next_order_id += 1
-            user.cart.clear()
+        if product_name in self.users[user_id]['cart']:
+            self.users[user_id]['cart'][product_name] += quantity
+        else:
+            self.users[user_id]['cart'][product_name] = quantity
 
-            return True, order_id
-        except:
-            for product_name, quantity in cart.items():
-                if product_name in self.stock:
-                    self.stock[product_name] += quantity
-                if product_name in self.reserved_stock:
-                    self.reserved_stock[product_name] += quantity
-            return False, None
+        if product_name in self.users[user_id]['reservations']:
+            self.users[user_id]['reservations'][product_name] += quantity
+        else:
+            self.users[user_id]['reservations'][product_name] = quantity
 
-    def update_order_status(self, order_id: str, target_status: str) -> bool:
+        return True
+
+    def remove_from_cart(self, user_id, product_name, quantity):
+        if user_id not in self.users:
+            return False
+
+        user_cart = self.users[user_id]['cart']
+        if product_name not in user_cart:
+            return False
+
+        reserved_quantity = user_cart[product_name]
+        if quantity > reserved_quantity:
+            return False
+
+        if quantity == reserved_quantity:
+            del user_cart[product_name]
+        else:
+            user_cart[product_name] -= quantity
+
+        user_reservations = self.users[user_id]['reservations']
+        if product_name in user_reservations:
+            if quantity == user_reservations[product_name]:
+                del user_reservations[product_name]
+            else:
+                user_reservations[product_name] -= quantity
+
+        return True
+
+    def checkout(self, user_id):
+        if user_id not in self.users or not self.users[user_id]['cart']:
+            return None
+
+        cart = self.users[user_id]['cart']
+        total_price = 0.0
+
+        for product_name, quantity in cart.items():
+            if product_name not in self.products:
+                return None
+
+            product = self.products[product_name]
+            other_reservations = sum(
+                self.users.get(other_user, {}).get('reservations', {}).get(product_name, 0)
+                for other_user in self.users
+                if other_user != user_id
+            )
+            available_stock = product['stock'] - other_reservations
+
+            if available_stock < quantity:
+                return None
+
+            total_price += product['price'] * quantity
+
+        order_id = f"SK{self.next_order_id:05d}"
+        self.next_order_id += 1
+
+        order = {
+            'status': 'pending',
+            'items': cart.copy(),
+            'price_snapshot': {product: self.products[product]['price'] for product in cart},
+            'total_price': total_price
+        }
+        self.orders[order_id] = order
+
+        for product_name, quantity in cart.items():
+            self.products[product_name]['stock'] -= quantity
+
+        self.users[user_id]['cart'].clear()
+        if user_id in self.users and 'reservations' in self.users[user_id]:
+            self.users[user_id]['reservations'].clear()
+
+        return order_id
+
+    def update_order_status(self, order_id, new_status):
         if order_id not in self.orders:
             return False
 
-        order = self.orders[order_id]
-        current_status = order.status
+        current_status = self.orders[order_id]['status']
+
+        if current_status in ['cancelled', 'delivered']:
+            if new_status != 'cancelled':
+                return False
 
         valid_transitions = {
             'pending': ['processing', 'cancelled'],
             'processing': ['completed', 'cancelled'],
             'completed': ['shipped', 'cancelled'],
-            'shipped': ['delivered', 'cancelled'],
-            'delivered': ['cancelled']
+            'shipped': ['delivered', 'cancelled']
         }
 
-        if target_status not in valid_transitions.get(current_status, []):
+        if new_status not in valid_transitions.get(current_status, []):
             return False
 
-        valid_statuses = ['pending', 'processing', 'completed', 'shipped', 'delivered', 'cancelled']
-        if target_status not in valid_statuses:
-            return False
-
-        if target_status == 'cancelled':
-            for product_name, product_data in order.products.items():
+        if new_status == 'cancelled':
+            for product_name, quantity in self.orders[order_id]['items'].items():
                 if product_name in self.products:
-                    self.stock[product_name] += product_data['quantity']
+                    self.products[product_name]['stock'] += quantity
                 else:
-                    self.products[product_name] = Product(name=product_name, price=product_data['price'])
-                    self.stock[product_name] = product_data['quantity']
+                    price = self.orders[order_id]['price_snapshot'].get(product_name, 0.0)
+                    self.products[product_name] = {
+                        'price': price,
+                        'stock': quantity
+                    }
 
-        order.status = target_status
+        self.orders[order_id]['status'] = new_status
         return True
-
-    def get_system_state(self) -> dict:
-        state = {
-            'users': {user_id: {'cart': user.cart} for user_id, user in self.users.items()},
-            'products': {name: {'price': product.price, 'stock': self.stock[name]}
-                        for name, product in self.products.items()},
-            'stock': self.stock.copy(),
-            'reserved_stock': self.reserved_stock.copy(),
-            'orders': {order_id: {'status': order.status}
-                      for order_id, order in self.orders.items()}
-        }
-        return state

@@ -1,5 +1,3 @@
-
-
 ===== OUTPUT_generate_use_case OUTPUT =====
 Use Case: Manage E-Shop Backend System
 Primary Actor: User (Administrator/Customer)

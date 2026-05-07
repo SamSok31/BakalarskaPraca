@@ -32,11 +32,7 @@ class EShopSystem:
         self.system.checkout(user_id)
 
     def update_order_status(self, order_id: str, new_status: str):
-        try:
-            status = OrderStatus.from_string(new_status)
-        except Exception:
-            return
-
+        status = OrderStatus[new_status.upper()]
         self.system.update_order_status(order_id, status)
 
 

@@ -1,11 +1,11 @@
-from eshop_agent.output2_2 import EShopBackend as GeneratedSystem
+from eshop_agent.output2_2 import EShopSystem as GeneratedSystem
 
 
 class EShopSystem:
 
     def __init__(self):
         self.system = GeneratedSystem()
-        self.order_user_map = {}
+        self.order_owner = {}
 
 
     def create_user(self, user_id: str):
@@ -16,69 +16,79 @@ class EShopSystem:
 
 
     def add_product(self, product_id: str, price: int, stock: int):
-        self.system.add_or_update_product(product_id, price, stock)
+        self.system.add_product(product_id, price, stock)
 
     def delete_product(self, product_id: str):
         self.system.delete_product(product_id)
 
 
     def add_to_cart(self, user_id: str, product_id: str, quantity: int):
-        self.system.modify_cart(user_id, product_id, quantity)
+        self.system.add_to_cart(user_id, product_id, quantity)
 
     def remove_from_cart(self, user_id: str, product_id: str, quantity: int):
-        self.system.modify_cart(user_id, product_id, -quantity)
+        self.system.remove_from_cart(user_id, product_id, quantity)
 
 
     def checkout(self, user_id: str):
-        success, order_id = self.system.checkout(user_id)
+        order_id = self.system.checkout(user_id)
+        if order_id:
+            self.order_owner[order_id] = user_id
+        return order_id
 
-        if success and order_id is not None:
-            self.order_user_map[order_id] = user_id
 
     def update_order_status(self, order_id: str, new_status: str):
         self.system.update_order_status(order_id, new_status)
 
 
     def get_state(self):
+        state = self.system.get_system_state()
 
-        users = set(self.system.users.keys())
+        users = set(state['users'].keys())
+
+
+        products = set()
+        stock = set()
+        reserved_per_product = {}
+
+        for user_data in state['users'].values():
+            user_res = user_data.get('reservations', {})
+            for p, qty in user_res.items():
+                reserved_per_product[p] = reserved_per_product.get(p, 0) + qty
+
 
         products = set()
         stock = set()
 
-        for name, product in self.system.products.items():
-            products.add((name, int(product.price)))
-            stock.add((name, int(self.system.stock.get(name, 0))))
+        for p, data in state['products'].items():
+            products.add((p, data['price']))
+
+            physical = data['stock']
+            reserved = reserved_per_product.get(p, 0)
+
+            free_stock = physical - reserved
+
+            stock.add((p, free_stock))
+
 
         carts = set()
+        for u, udata in state['users'].items():
+            cart = udata.get('cart', {})
+            items = tuple(sorted(cart.items()))
+            carts.add((u, items))
 
-        for user_id, user in self.system.users.items():
-            items = tuple(sorted(
-                (name, qty) for name, qty in user.cart.items() if qty > 0
-            ))
-            carts.add((user_id, items))
 
         orders = set()
-
-        for order_id, order in self.system.orders.items():
-
-            items = []
-            total = 0
-
-            for name, data in order.products.items():
-                items.append((name, data["quantity"]))
-                total += data["price"] * data["quantity"]
-
-            items_tuple = tuple(sorted(items))
-
-            user_id = self.order_user_map.get(order_id, None)
+        for oid, odata in state['orders'].items():
+            user_id = self.order_owner.get(oid, None)
+            items = tuple(sorted(odata['items'].items()))
+            total_price = int(odata['total_price'])
 
             orders.add((
-                order_id,
-                order.status,
+                oid,
+                odata['status'],
                 user_id,
-                items_tuple,
-                int(total)
+                items,
+                total_price
             ))
 
         return {
@@ -86,5 +96,5 @@ class EShopSystem:
             "products": products,
             "stock": stock,
             "carts": carts,
-            "orders": orders,
+            "orders": orders
         }

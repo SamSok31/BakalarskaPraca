@@ -1,5 +1,5 @@
 #TODO: Choose the correct adapter to connect the generated code with the tests
-from reservation_system_agent.adapter1 import ReservationSystem
+from reservation_system_RooCode.adapter1 import ReservationSystem
 
 from evaluation import evaluate_state
 

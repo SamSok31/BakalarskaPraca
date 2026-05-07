@@ -1,5 +1,5 @@
 #TODO: Choose the correct adapter to connect the generated code with the tests
-from eshop_agent.adapter1 import EShopSystem
+from eshop_RooCode.adapter1_1 import EShopSystem
 
 from evaluation import evaluate_state
 

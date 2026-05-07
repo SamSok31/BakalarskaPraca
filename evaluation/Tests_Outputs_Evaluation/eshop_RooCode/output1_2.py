@@ -6,32 +6,18 @@ This system manages users, products, carts, reservations, and orders with strict
 stock management and atomic operations.
 """
 
-from typing import Dict, List, Optional, Set, Union
+from typing import Dict, List, Optional, Set
 from enum import Enum, auto
 import re
 
 
-class InvalidStatusError(ValueError):
-    """Raised when an invalid status is provided."""
-    pass
-
-
 class OrderStatus(Enum):
-    PENDING = "pending"
-    PROCESSING = "processing"
-    COMPLETED = "completed"
-    SHIPPED = "shipped"
-    DELIVERED = "delivered"
-    CANCELLED = "cancelled"
-
-    @classmethod
-    def from_string(cls, status_str: str) -> 'OrderStatus':
-        """Convert string to OrderStatus enum. Raises InvalidStatusError for invalid strings."""
-        status_str = status_str.lower()
-        for status in cls:
-            if status.value == status_str:
-                return status
-        raise InvalidStatusError(f"Invalid status: {status_str}")
+    PENDING = auto()
+    PROCESSING = auto()
+    COMPLETED = auto()
+    SHIPPED = auto()
+    DELIVERED = auto()
+    CANCELLED = auto()
 
 
 class ProductSnapshot:
@@ -124,26 +110,24 @@ class Order:
             return False  # Terminal state
         
         if self.status == OrderStatus.DELIVERED:
-            # From delivered, only transition to cancelled is allowed
-            success = new_status == OrderStatus.CANCELLED
-            if success:
-                self.status = new_status
-                self._status_history.append(new_status)
-            return success
+            return new_status == OrderStatus.CANCELLED
         
         if new_status == OrderStatus.CANCELLED:
-            # Can cancel from any state (except already cancelled)
-            self.status = new_status
-            self._status_history.append(new_status)
-            return True
+            # Can cancel from any state
+            pass
+        elif new_status.value <= self.status.value:
+            # Cannot move backward in status progression
+            return False
+        elif new_status.value > self.status.value + 1:
+            # Can only move to next status or cancel
+            return False
+        else:
+            # Valid transition to next status
+            pass
         
-        # Regular progression: pending -> processing -> completed -> shipped -> delivered
-        if new_status.value == self.status.value + 1:
-            self.status = new_status
-            self._status_history.append(new_status)
-            return True
-        
-        return False  # Invalid transition
+        self.status = new_status
+        self._status_history.append(new_status)
+        return True
 
     def get_total(self) -> float:
         """Calculate total order value."""
@@ -164,7 +148,6 @@ class EShopBackend:
         self.reservations: Dict[str, Reservation] = {}  # user_id -> Reservation
         self.orders: Dict[str, Order] = {}  # order_id -> Order
         self.next_order_number = 1  # For generating sequential order IDs
-        self._total_reserved: Dict[str, int] = {}  # product_id -> total reserved quantity across all users
         self._validate_invariants()
 
     def _validate_invariants(self) -> None:
@@ -179,15 +162,6 @@ class EShopBackend:
             assert user_id in self.users, f"Cart for non-existent user {user_id}"
         for user_id in self.reservations:
             assert user_id in self.users, f"Reservation for non-existent user {user_id}"
-        
-        # Validate stock consistency
-        for product_id, product in self.products.items():
-            total_reserved = 0
-            for reservation in self.reservations.values():
-                total_reserved += reservation.get_reserved_quantity(product_id)
-            
-            # Ensure total_reserved doesn't exceed initial stock
-            assert total_reserved <= product.stock + total_reserved, f"Inconsistent reserved stock for {product_id}"
 
     def _generate_order_id(self) -> str:
         """Generate next sequential order ID."""
@@ -211,15 +185,12 @@ class EShopBackend:
         if user_id not in self.users:
             return False
         
-        # Cancel all reservations and update total reserved counts
+        # Cancel all reservations and return stock
         reservation = self.reservations[user_id]
         for product_id, quantity in list(reservation.items.items()):
             if product_id in self.products:
                 self.products[product_id].stock += quantity
             
-            # Update total reserved count
-            self._total_reserved[product_id] = self._total_reserved.get(product_id, 0) - quantity
-        
         # Remove user data
         self.users.pop(user_id)
         self.carts.pop(user_id)
@@ -259,21 +230,6 @@ class EShopBackend:
         
         return True
 
-    def _get_available_stock(self, product_id: str, exclude_user: Optional[str] = None) -> int:
-        """Get available stock for a product, excluding reservations from a specific user."""
-        if product_id not in self.products:
-            return 0
-        
-        product = self.products[product_id]
-        total_reserved = self._total_reserved.get(product_id, 0)
-        
-        if exclude_user:
-            user_reservation = self.reservations.get(exclude_user, Reservation(exclude_user))
-            user_reserved = user_reservation.get_reserved_quantity(product_id)
-            total_reserved -= user_reserved
-        
-        return max(0, product.stock - total_reserved)
-
     def add_to_cart(self, user_id: str, product_id: str, quantity: int) -> bool:
         """Add product to user's cart and create reservation."""
         if user_id not in self.users or product_id not in self.products or quantity <= 0:
@@ -282,20 +238,13 @@ class EShopBackend:
         product = self.products[product_id]
         reservation = self.reservations[user_id]
         
-        # Check if enough stock is available (excluding current user's existing reservations)
-        available_stock = self._get_available_stock(product_id, exclude_user=user_id)
-        
-        if quantity > available_stock:
+        # Check if enough stock is available (product.stock already reflects current available stock)
+        if quantity > product.stock:
             return False
         
         # Add to reservation
-        old_quantity = reservation.get_reserved_quantity(product_id)
         reservation.add_item(product_id, quantity)
-        
-        # Update total reserved count
-        new_quantity = reservation.get_reserved_quantity(product_id)
-        delta = new_quantity - old_quantity
-        self._total_reserved[product_id] = self._total_reserved.get(product_id, 0) + delta
+        product.stock -= quantity
         
         # Update cart
         cart = self.carts[user_id]
@@ -315,6 +264,7 @@ class EShopBackend:
         
         cart = self.carts[user_id]
         reservation = self.reservations[user_id]
+        product = self.products[product_id]
         
         # Find cart item
         cart_item = next((item for item in cart if item.product_id == product_id), None)
@@ -325,11 +275,9 @@ class EShopBackend:
         if cart_item.quantity < quantity:
             return False
         
-        # Remove from reservation
+        # Remove from reservation and return stock
         removed_quantity = reservation.remove_item(product_id, quantity)
-        
-        # Update total reserved count
-        self._total_reserved[product_id] = self._total_reserved.get(product_id, 0) - removed_quantity
+        product.stock += removed_quantity
         
         # Update cart
         if cart_item.quantity == quantity:
@@ -351,19 +299,20 @@ class EShopBackend:
         if not cart or not reservation.items:
             return None  # Empty cart
         
-        # Validate all reserved products still exist and have correct prices
-        order_items = []
+        # Validate all reserved products still exist (checkout must be atomic)
         for cart_item in cart:
             if cart_item.product_id not in self.products:
                 # Product no longer exists - fail checkout
                 return None
-            
+        
+        # Create order with current prices (checkout must store price snapshot)
+        order_items = []
+        for cart_item in cart:
             product = self.products[cart_item.product_id]
-            # Use current price for order (per requirements)
             order_items.append(ProductSnapshot(
                 cart_item.product_id,
                 cart_item.name,
-                product.price,  # Use current price
+                product.price,  # Always use current price at time of checkout
                 cart_item.quantity
             ))
         
@@ -372,47 +321,36 @@ class EShopBackend:
         order = Order(order_id, user_id, order_items)
         self.orders[order_id] = order
         
-        # Clear cart and reservations, and update total reserved counts
-        for cart_item in cart:
-            reserved_quantity = reservation.get_reserved_quantity(cart_item.product_id)
-            self._total_reserved[cart_item.product_id] = self._total_reserved.get(cart_item.product_id, 0) - reserved_quantity
-        
+        # Clear cart and reservations (stock already deducted at reservation time)
         self.carts[user_id] = []
         self.reservations[user_id] = Reservation(user_id)
         
         self._validate_invariants()
         return order_id
 
-    def update_order_status(self, order_id: str, new_status: Union[str, OrderStatus]) -> bool:
-        """Update order status. Ignores invalid status strings."""
+    def update_order_status(self, order_id: str, new_status: OrderStatus) -> bool:
+        """Update order status."""
         if order_id not in self.orders:
             return False
         
-        try:
-            # Convert string to OrderStatus if needed
-            if isinstance(new_status, str):
-                new_status = OrderStatus.from_string(new_status)
-            
-            order = self.orders[order_id]
-            success = order.update_status(new_status)
-            
-            if success and new_status == OrderStatus.CANCELLED:
-                # Return stock for cancelled order
-                for item in order.items:
-                    if item.product_id in self.products:
-                        # Product still exists - return stock
-                        self.products[item.product_id].stock += item.quantity
-                        # Update total reserved count
-                        self._total_reserved[item.product_id] = self._total_reserved.get(item.product_id, 0) - item.quantity
-                    else:
-                        # Product no longer exists - recreate it
-                        self.add_product(item.product_id, item.name, item.price, item.quantity)
-            
-            return success
-            
-        except InvalidStatusError:
-            # Ignore invalid status inputs
+        # Check if new_status is valid (not None and is an OrderStatus enum value)
+        if not isinstance(new_status, OrderStatus):
             return False
+        
+        order = self.orders[order_id]
+        success = order.update_status(new_status)
+        
+        if success and new_status == OrderStatus.CANCELLED:
+            # Return stock for cancelled order
+            for item in order.items:
+                if item.product_id in self.products:
+                    # Product still exists - return stock
+                    self.products[item.product_id].stock += item.quantity
+                else:
+                    # Product no longer exists - recreate it
+                    self.add_product(item.product_id, item.name, item.price, item.quantity)
+        
+        return success
 
     def get_current_users(self) -> List[str]:
         """Get list of current user IDs."""
@@ -434,21 +372,11 @@ class EShopBackend:
             return []
         return self.carts[user_id].copy()
 
-    def get_available_stock(self, product_id: str) -> int:
-        """Get current available stock for a product."""
-        if product_id not in self.products:
-            return 0
-        return self._get_available_stock(product_id)
-
     def get_user_reservations(self, user_id: str) -> Dict[str, int]:
         """Get user's current reservations."""
         if user_id not in self.users:
             return {}
         return self.reservations[user_id].items.copy()
-
-    def get_total_reserved(self, product_id: str) -> int:
-        """Get total reserved quantity for a product across all users."""
-        return self._total_reserved.get(product_id, 0)
 
     def get_orders(self) -> List[Order]:
         """Get all orders."""

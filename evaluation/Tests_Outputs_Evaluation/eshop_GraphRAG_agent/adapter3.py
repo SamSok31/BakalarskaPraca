@@ -13,17 +13,20 @@ class EShopSystem:
     def delete_user(self, user_id: str):
         self.system.delete_user(user_id)
 
+
     def add_product(self, product_id: str, price: int, stock: int):
         self.system.add_or_update_product(product_id, price, stock)
 
     def delete_product(self, product_id: str):
         self.system.delete_product(product_id)
 
+
     def add_to_cart(self, user_id: str, product_id: str, quantity: int):
         self.system.modify_cart(user_id, product_id, quantity)
 
     def remove_from_cart(self, user_id: str, product_id: str, quantity: int):
         self.system.modify_cart(user_id, product_id, -quantity)
+
 
     def checkout(self, user_id: str):
         self.system.checkout(user_id)
