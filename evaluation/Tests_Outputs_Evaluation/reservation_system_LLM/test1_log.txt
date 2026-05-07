@@ -1,0 +1,641 @@
+1. RUN
+
+===================================================== 36 passed in 0.38s ======================================================
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': {'B'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': {'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1', 'R2'}, 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1', 'R2'}, 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R2'}, 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R2'}, 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': {'A', 'B'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': {'A', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A'}}
+
+ACTUAL:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A', 'B'}}
+
+ACTUAL:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1'}, 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1'}, 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1'}, 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1'}, 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A'}}
+
+ACTUAL:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A'}}
+
+ACTUAL:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R2', None)}, 'rooms': {'R1', 'R2'}, 'users': {'A'}}
+
+ACTUAL:
+{'reservations': {('A', 'R2', None)}, 'rooms': {'R1', 'R2'}, 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1'}, 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1'}, 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+ACTUAL:
+{'reservations': set(), 'rooms': set(), 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+ACTUAL:
+{'reservations': set(), 'rooms': {'R1'}, 'users': set()}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A', 'C', 'B'}}
+
+ACTUAL:
+{'reservations': {('A', 'R1', None)}, 'rooms': {'R1'}, 'users': {'A', 'C', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R2', None), ('A', 'R1', None), ('A', 'R3', None)},
+ 'rooms': {'R3', 'R1', 'R2'},
+ 'users': {'A'}}
+
+ACTUAL:
+{'reservations': {('A', 'R2', None), ('A', 'R1', None), ('A', 'R3', None)},
+ 'rooms': {'R3', 'R1', 'R2'},
+ 'users': {'A'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('B', 'R2', None), ('B', 'R1', None)},
+ 'rooms': {'R1', 'R2'},
+ 'users': {'A', 'B'}}
+
+ACTUAL:
+{'reservations': {('B', 'R2', None), ('B', 'R1', None)},
+ 'rooms': {'R1', 'R2'},
+ 'users': {'A', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('B', 'R2', None)}, 'rooms': {'R1', 'R2'}, 'users': {'B'}}
+
+ACTUAL:
+{'reservations': {('B', 'R2', None)}, 'rooms': {'R1', 'R2'}, 'users': {'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R2', None), ('A', 'R1', None)},
+ 'rooms': {'R1', 'R2'},
+ 'users': {'A', 'C', 'B'}}
+
+ACTUAL:
+{'reservations': {('A', 'R2', None), ('A', 'R1', None)},
+ 'rooms': {'R1', 'R2'},
+ 'users': {'A', 'C', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R1', (10, 11)), ('B', 'R1', (11, 12))},
+ 'rooms': {'R1'},
+ 'users': {'A', 'B'}}
+
+ACTUAL:
+{'reservations': {('A', 'R1', (10, 11)), ('B', 'R1', (11, 12))},
+ 'rooms': {'R1'},
+ 'users': {'A', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R1', (10, 12))}, 'rooms': {'R1'}, 'users': {'A', 'B'}}
+
+ACTUAL:
+{'reservations': {('A', 'R1', (10, 12))}, 'rooms': {'R1'}, 'users': {'A', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('B', 'R1', (10, 12))}, 'rooms': {'R1'}, 'users': {'A', 'B'}}
+
+ACTUAL:
+{'reservations': {('B', 'R1', (10, 12))}, 'rooms': {'R1'}, 'users': {'A', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+============================
+TEST PASSED
+
+EXPECTED:
+{'reservations': {('A', 'R1', (10, 11)), ('B', 'R1', (11, 12))},
+ 'rooms': {'R1'},
+ 'users': {'A', 'B'}}
+
+ACTUAL:
+{'reservations': {('A', 'R1', (10, 11)), ('B', 'R1', (11, 12))},
+ 'rooms': {'R1'},
+ 'users': {'A', 'B'}}
+
+F1 DETAILS:
+users_f1 = 1.000
+rooms_f1 = 1.000
+reservations_f1 = 1.000
+
+OVERALL F1:
+(1.000 + 1.000 + 1.000) / 3 = 1.000
+
+
+
+========================================
+F1 SCORE (average): 1.0000
+========================================
