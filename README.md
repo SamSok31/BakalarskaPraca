@@ -1,23 +1,43 @@
 # BakalarskaPraca
 
-This repository contains the implementation and evaluation artifacts for a bachelor's thesis focused on an agent-based system for source code generation using large language models.
+---
 
-## Overview
+## SK Popis
 
-The project explores the use of:
-- Large Language Models (LLMs)
-- Agent-based architectures (LangGraph)
-- GraphRAG knowledge base (Neo4j)
+Tento repozitár obsahuje implementáciu a evaluačné podklady k bakalárskej práci zameranej na návrh a implementáciu agentického systému pre generovanie zdrojového kódu z prirodzeného jazykového zadania.
 
-The goal is to design and evaluate a system capable of generating source code from natural language descriptions.
+Práca skúma využitie:
+- agentických systémov (LangGraph),
+- prístupu GraphRAG so znalostnou bázou (Neo4j),
+- fragmentácie procesu generovania,
+- iteratívnej validácie generovaného kódu.
 
-## Repository structure
+Cieľom je navrhnúť systém schopný generovať funkčný zdrojový kód na základe textového zadania a experimentálne vyhodnotiť jeho vlastnosti.
 
-- implementation/ – source code of the proposed agentic system  
-- evaluation/ – experimental setup, test cases, generated outputs, and logs  
+### Štruktúra repozitára
 
-## Additional information
+- `implementation/` – implementácia navrhovaného agentického systému  
+- `evaluation/` – testovacie scenáre, výstupy, logy a evaluačné podklady  
 
-Detailed instructions for running the system can be found in:
-- implementation/README.md  
-- evaluation/README.md
+Podrobnejšie informácie o spustení a použití systému sa nachádzajú v príslušných priečinkoch.
+
+---
+
+## EN Description
+
+This repository contains the implementation and evaluation artifacts for a bachelor's thesis focused on the design and implementation of an agentic system for source code generation from natural language input.
+
+The work explores the use of:
+- agent-based architectures (LangGraph),
+- GraphRAG knowledge base (Neo4j),
+- fragmentation of generation process,
+- iterative validation of generated code.
+
+The goal is to design a system capable of generating functional source code from textual descriptions and experimentally evaluate its behavior.
+
+### Repository structure
+
+- `implementation/` – implementation of the proposed agentic system  
+- `evaluation/` – test cases, generated outputs, logs, and evaluation artifacts  
+
+Detailed instructions for running the system can be found in the corresponding subdirectories.
